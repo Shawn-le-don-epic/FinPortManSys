@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}New Stock{% endblock %}
+
+{% block content %}
+<h1>Add a New Stock</h1>
+<form method="POST" action="{{ url_for('new_stock') }}">
+    <div>
+        <label for="ticker">Ticker:</label>
+        <input type="text" id="ticker" name="ticker" required>
+    </div>
+    <br>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <br>
+    <div>
+        <label for="open">Open Price:</label>
+        <input type="number" id="open" name="open" step="0.01" required>
+    </div>
+    <br>
+    <div>
+        <label for="high">High:</label>
+        <input type="number" id="high" name="high" step="0.01" required>
+    </div>
+    <br>
+    <div>
+        <label for="low">Low:</label>
+        <input type="number" id="low" name="low" step="0.01" required>
+    </div>
+    <br>
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+    </div>
+    <br>
+    <div>
+        <label for="sector">Sector:</label>
+        <input type="text" id="sector" name="sector" required>
+    </div>
+    <br>
+    <div>
+        <label for="pe_ratio">P/E Ratio:</label>
+        <input type="number" id="pe_ratio" name="pe_ratio" step="0.01" required>
+    </div>
+    <br>
+    <div>
+        <label for="eps">EPS:</label>
+        <input type="number" id="eps" name="eps" step="0.01" required>
+    </div>
+    <br>
+<!--<div>
+        <label for="investment_amount">Investment Amount:</label>
+        <input type="number" id="investment_amount" name="investment_amount" step="0.01" required>
+    </div> -->
+    <div>
+        <label for="purchasedate">Purchase Date:</label>
+        <input type="date" id="purchasedate" name="purchasedate" required>
+    </div>
+    <br>
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+    </div>
+    <br>
+    <button type="submit">Add Stock</button>
+</form>
+{% endblock %}

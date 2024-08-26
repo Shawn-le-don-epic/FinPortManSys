@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Real Estate{% endblock %}
+
+{% block content %}
+<h1>Real Estate Overview</h1>
+<table class="stocks-table">
+    <tr>
+        <th>Property ID</th>
+        <th>Type</th>
+        <th>Acreage</th>
+        <th>Address</th>
+        <th>Purchase Price</th>
+        <th>Selling Price</th>
+        <th>Current Value</th>
+    </tr>
+    {% for estate in realestate %}
+    <tr>
+        <td>{{ estate.propertyid }}</td>
+        <td>{{ estate.type }}</td>
+        <td>{{ estate.acreage }}</td>
+        <td>{{ estate.address }}</td>
+        <td>{{ estate.purchaseprice }}</td>
+        <td>{{ estate.sellingprice }}</td>
+        <td>{{ estate.currentval }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

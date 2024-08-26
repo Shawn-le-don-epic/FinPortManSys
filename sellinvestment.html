@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Sell Investment{% endblock %}
+
+{% block content %}
+<h1>Sell Investment</h1>
+<div class="tiles">
+    <div class="tile"><a href="{{ url_for('sell_stock') }}">Stocks</a></div>
+    <div class="tile"><a href="{{ url_for('sell_bond') }}">Bonds</a></div>
+    <div class="tile"><a href="{{ url_for('sell_realestate') }}">Real Estate</a></div>
+    <div class="tile"><a href="{{ url_for('sell_goldbond') }}">Gold Bonds</a></div>
+</div>
+{% endblock %}

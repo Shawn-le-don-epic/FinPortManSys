@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}Best Investments{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h1>Best Investment</h1>
+        <h2>Best Stock</h2>
+        {% if best_stock %}
+            <table class="best-investment-table">
+                <tr>
+                    <th>Ticker</th>
+                    <th>Name</th>
+                    <th>Open</th>
+                    <th>High</th>
+                    <th>Low</th>
+                    <th>Price</th>
+                    <th>Sector</th>
+                    <th>P/E Ratio</th>
+                    <th>EPS</th>
+                </tr>
+                <tr>
+                    <td>{{ best_stock[0] }}</td>
+                    <td>{{ best_stock[1] }}</td>
+                    <td>{{ best_stock[2] }}</td>
+                    <td>{{ best_stock[3] }}</td>
+                    <td>{{ best_stock[4] }}</td>
+                    <td>{{ best_stock[5] }}</td>
+                    <td>{{ best_stock[6] }}</td>
+                    <td>{{ best_stock[7] }}</td>
+                    <td>{{ best_stock[8] }}</td>
+                </tr>
+            </table>
+        {% else %}
+            <p>No stock investments found.</p>
+        {% endif %}
+
+    <h2>Best Bond</h2>
+    {% if best_bond %}
+    <table class="best-investment-table">
+        <tr>
+            <th>ID</th>
+            <th>Purchase Price</th>
+            <th>Issuer</th>
+            <th>Interest Rate</th>
+            <th>Maturity Date</th>
+            <th>Maturity Amount</th>
+        </tr>
+        <tr>
+            <td>{{ best_bond[0] }}</td>
+            <td>{{ best_bond[1] }}</td>
+            <td>{{ best_bond[2] }}</td>
+            <td>{{ best_bond[3] }}</td>
+            <td>{{ best_bond[4] }}</td>
+            <td>{{ best_bond[5] }}</td>
+        </tr>
+    </table>
+    {% else %}
+        <p>No bond investment found.</p>
+    {% endif %}
+
+    <h2>Best Real Estate</h2>
+    {% if best_realestate %}
+    <table class="best-investment-table">
+        <tr>
+            <th>Property ID</th>
+            <th>Type</th>
+            <th>Acreage</th>
+            <th>Address</th>
+            <th>Purchase Price</th>
+            <th>Selling Price</th>
+            <th>Current Value</th>
+        </tr>
+        <tr>
+            <td>{{ best_realestate[0] }}</td>
+            <td>{{ best_realestate[1] }}</td>
+            <td>{{ best_realestate[2] }}</td>
+            <td>{{ best_realestate[3] }}</td>
+            <td>{{ best_realestate[4] }}</td>
+            <td>{{ best_realestate[5] }}</td>
+            <td>{{ best_realestate[6] }}</td>
+        </tr>
+    </table>
+    {% else %}
+        <p>No real estate investment found.</p>
+    {% endif %}
+
+    <h2>Best Gold Bond</h2>
+    {% if best_goldbond %}
+    <table class="best-investment-table">
+        <tr>
+            <th>ID</th>
+            <th>Issue Price</th>
+            <th>Maturity Date</th>
+            <th>Maturity Amount</th>
+            <th>Interest Rate</th>
+            <th>Nominee</th>
+        </tr>
+        <tr>
+            <td>{{ best_goldbond[0] }}</td>
+            <td>{{ best_goldbond[1] }}</td>
+            <td>{{ best_goldbond[2] }}</td>
+            <td>{{ best_goldbond[3] }}</td>
+            <td>{{ best_goldbond[4] }}</td>
+            <td>{{ best_goldbond[5] }}</td>
+        </tr>
+    </table>
+    {% else %}
+        <p>No gold bond investment found.</p>
+    {% endif %}
+
+    <h2>Best Fixed Deposit</h2>
+    {% if best_fixeddeposit %}
+    <table class="best-investment-table">
+        <tr>
+            <th>Account Number</th>
+            <th>Principal</th>
+            <th>Interest Rate</th>
+            <th>Maturity Amount</th>
+            <th>Maturity Date</th>
+            <th>Nominee</th>
+            <th>Penalty</th>
+        </tr>
+        <tr>
+            <td>{{ best_fixeddeposit[0] }}</td>
+            <td>{{ best_fixeddeposit[1] }}</td>
+            <td>{{ best_fixeddeposit[2] }}</td>
+            <td>{{ best_fixeddeposit[3] }}</td>
+            <td>{{ best_fixeddeposit[4] }}</td>
+            <td>{{ best_fixeddeposit[5] }}</td>
+            <td>{{ best_fixeddeposit[6] }}</td>
+        </tr>
+    </table>
+    {% else %}
+        <p>No fixed deposit investment found.</p>
+    {% endif %}
+    </div>
+{% endblock %}

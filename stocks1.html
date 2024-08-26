@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Stocks Overview{% endblock %}
+
+{% block content %}
+<h1>Stocks Overview</h1>
+
+<table class="stocks-table">
+    <thead>
+        <tr>
+            <th>Ticker</th>
+            <th>Name</th>
+            <th>Open</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Price</th>
+            <th>Sector</th>
+            <th>P/E Ratio</th>
+            <th>EPS</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.ticker }}</td>
+            <td>{{ stock.name }}</td>
+            <td>{{ stock.open }}</td>
+            <td>{{ stock.high }}</td>
+            <td>{{ stock.low }}</td>
+            <td>{{ stock.price }}</td>
+            <td>{{ stock.sector }}</td>
+            <td>{{ stock.pe_ratio }}</td>
+            <td>{{ stock.eps }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

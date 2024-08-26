@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}New Gold Bond{% endblock %}
+
+{% block content %}
+<h1>Add a Gold Bond</h1>
+<form method="POST" action="{{ url_for('new_goldbond') }}">
+    <label for="issueprice">Issue Price:</label>
+    <input type="text" id="issueprice" name="issueprice" required><br><br>
+
+    <label for="maturitydate">Maturity Date:</label>
+    <input type="date" id="maturitydate" name="maturitydate" required><br><br>
+
+    <label for="maturityamount">Maturity Amount:</label>
+    <input type="text" id="maturityamount" name="maturityamount" required><br><br>
+
+    <label for="interestrate">Interest Rate:</label>
+    <input type="text" id="interestrate" name="interestrate" required><br><br>
+
+    <label for="nominee">Nominee:</label>
+    <input type="text" id="nominee" name="nominee" required><br><br>
+
+    <label for="purchasedate">Purchase Date:</label>
+    <input type="date" id="purchasedate" name="purchasedate" required><br><br>
+
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+    </div>
+
+    <!-- <input type="submit" value="Add Gold Bond"> -->
+    <button type="submit">Add Gold Bond</button>
+</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}New Real Estate Property{% endblock %}
+
+{% block content %}
+<h1>Add a New Real Estate Property</h1>
+<form method="POST" action="{{ url_for('new_realestate') }}">
+    <label for="type">Type:</label>
+        <input type="text" id="type" name="type" required><br><br>
+
+        <label for="acreage">Acreage:</label>
+        <input type="text" id="acreage" name="acreage" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="purchaseprice">Purchase Price:</label>
+        <input type="text" id="purchaseprice" name="purchaseprice" required><br><br>
+
+    <!-- <label for="sellingprice">Selling Price:</label>
+        <input type="text" id="sellingprice" name="sellingprice"><br><br> -->
+
+        <label for="currentval">Current Value:</label>
+        <input type="text" id="currentval" name="currentval" required><br><br>
+
+        <label for="purchasedate">Purchase Date:</label>
+        <input type="date" id="purchasedate" name="purchasedate"><br><br>
+
+        <!-- <input type="submit" value="Add Real Estate"> -->
+    <button type="submit">Add Real Estate</button>
+</form>
+{% endblock %}

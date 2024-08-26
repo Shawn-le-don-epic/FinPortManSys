@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Bonds{% endblock %}
+
+{% block content %}
+<h1>Bonds Overview</h1>
+<table class="stocks-table">
+    <tr>
+        <th>ID</th>
+        <th>Purchase Price</th>
+        <th>Issuer</th>
+        <th>Interest Rate</th>
+        <th>Maturity Date</th>
+        <th>Maturity Amount</th>
+    </tr>
+    {% for bond in bonds %}
+    <tr>
+        <td>{{ bond.id }}</td>
+        <td>{{ bond.purchaseprice }}</td>
+        <td>{{ bond.issuer }}</td>
+        <td>{{ bond.interestrate }}</td>
+        <td>{{ bond.maturitydate }}</td>
+        <td>{{ bond.maturityamount }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

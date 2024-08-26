@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Other-Nominated Investments{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h1>Other-Nominated Investments</h1>
+
+        <h2>Gold Bonds</h2>
+        {% if goldbonds %}
+            <table class="goldbonds-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Issue Price</th>
+                    <th>Maturity Date</th>
+                    <th>Maturity Amount</th>
+                    <th>Interest Rate</th>
+                    <th>Nominee</th>
+                </tr>
+                {% for goldbond in goldbonds %}
+                <tr>
+                    <td>{{ goldbond[0] }}</td>
+                    <td>{{ goldbond[1] }}</td>
+                    <td>{{ goldbond[2] }}</td>
+                    <td>{{ goldbond[3] }}</td>
+                    <td>{{ goldbond[4] }}</td>
+                    <td>{{ goldbond[5] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No other-nominated gold bonds found.</p>
+        {% endif %}
+
+        <h2>Fixed Deposits</h2>
+        {% if fixeddeposits %}
+            <table class="fixeddeposits-table">
+                <tr>
+                    <th>Account Number</th>
+                    <th>Principal</th>
+                    <th>Interest Rate</th>
+                    <th>Maturity Amount</th>
+                    <th>Maturity Date</th>
+                    <th>Nominee</th>
+                    <th>Penalty</th>
+                </tr>
+                {% for fd in fixeddeposits %}
+                <tr>
+                    <td>{{ fd[0] }}</td>
+                    <td>{{ fd[1] }}</td>
+                    <td>{{ fd[2] }}</td>
+                    <td>{{ fd[3] }}</td>
+                    <td>{{ fd[4] }}</td>
+                    <td>{{ fd[5] }}</td>
+                    <td>{{ fd[6] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No other-nominated fixed deposits found.</p>
+        {% endif %}
+    </div>
+{% endblock %}

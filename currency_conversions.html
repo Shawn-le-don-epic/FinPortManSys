@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Currency Conversions{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Investment Platform - Currency Conversions</h1>
+
+<div class="tiles">
+    <div class="tile"><a href="{{ url_for('stocks2') }}">Stocks</a></div>
+    <div class="tile"><a href="{{ url_for('bonds2') }}">Bonds</a></div>
+    <div class="tile"><a href="{{ url_for('realestate2') }}">Real Estate</a></div>
+    <div class="tile"><a href="{{ url_for('goldbonds2') }}">Gold Bonds</a></div>
+    <div class="tile"><a href="{{ url_for('fixeddeposits2') }}">Fixed Deposits</a></div>
+</div>
+{% endblock %}

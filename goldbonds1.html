@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Gold Bonds{% endblock %}
+
+{% block content %}
+<h1>Gold Bonds Overview</h1>
+<table class="stocks-table">
+    <tr>
+        <th>ID</th>
+        <th>Issue Price</th>
+        <th>Maturity Date</th>
+        <th>Maturity Amount</th>
+        <th>Interest Rate</th>
+        <th>Nominee</th>
+    </tr>
+    {% for goldbond in goldbonds %}
+    <tr>
+        <td>{{ goldbond.id }}</td>
+        <td>{{ goldbond.issueprice }}</td>
+        <td>{{ goldbond.maturitydate }}</td>
+        <td>{{ goldbond.maturityamount }}</td>
+        <td>{{ goldbond.interestrate }}</td>
+        <td>{{ goldbond.nominee }}</td> 
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

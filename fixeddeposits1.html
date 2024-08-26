@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Fixed Deposits{% endblock %}
+
+{% block content %}
+<h1>Fixed Deposits Overview</h1>
+<table class="stocks-table">
+    <tr>
+        <th>Account Number</th>
+        <th>Principal</th>
+        <th>Interest Rate</th>
+        <th>Maturity Amount</th>
+        <th>Maturity Date</th>
+        <th>Nominee</th>
+        <th>Penalty</th>
+    </tr>
+    {% for deposit in fixeddeposits %}
+    <tr>
+        <td>{{ deposit.accountnumber }}</td>
+        <td>{{ deposit.principal }}</td>
+        <td>{{ deposit.interestrate }}</td>
+        <td>{{ deposit.maturityamount }}</td>
+        <td>{{ deposit.maturitydate }}</td>
+        <td>{{ deposit.nominee }}</td>
+        <td>{{ deposit.penalty }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

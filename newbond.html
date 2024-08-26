@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}New Bond{% endblock %}
+
+{% block content %}
+<h1>Add a New Bond</h1>
+<form method="POST" action="{{ url_for('new_bond') }}">
+    <div>
+        <label for="purchaseprice">Purchase Price:</label>
+        <input type="number" id="purchaseprice" name="purchaseprice" step="0.01" required>
+    </div>
+    <div>
+        <label for="issuer">Issuer:</label>
+        <input type="text" id="issuer" name="issuer" required>
+    </div>
+    <div>
+        <label for="interestrate">Interest Rate:</label>
+        <input type="number" id="interestrate" name="interestrate" step="0.01" required>
+    </div>
+    <div>
+        <label for="maturitydate">Maturity Date:</label>
+        <input type="date" id="maturitydate" name="maturitydate" required>
+    </div>
+    <div>
+        <label for="maturityamount">Maturity Amount:</label>
+        <input type="number" id="maturityamount" name="maturityamount" step="0.01" required>
+    </div>
+    <div>
+        <label for="purchasedate">Purchase Date:</label>
+        <input type="date" id="purchasedate" name="purchasedate" required>
+    </div>
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+    </div>
+    <button type="submit">Add Bond</button>
+</form>
+{% endblock %}

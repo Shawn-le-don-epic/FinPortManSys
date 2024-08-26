@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<h1>Profile</h1>
+<div class="tiles">
+    <div class="tile"><a href="{{ url_for('sell_investment') }}">Sell Investment</a></div>
+    <div class="tile"><a href="{{ url_for('payment') }}">Payment</a></div>
+</div>
+{% endblock %}

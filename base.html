@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Adjust font family if needed */
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333; /* Adjust background color as desired */
+            color: #fff; /* Adjust text color for better contrast */
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000; /* Ensure navigation bar stays on top of other content */
+        }
+        .content {
+            margin-top: 50px; /* Adjust margin to prevent content from being hidden behind the navigation bar */
+            margin-bottom: 50px; /* Adjust margin to prevent content from being hidden behind the footer */
+            padding: 20px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333; /* Adjust background color as desired */
+            color: #fff; /* Adjust text color for better contrast */
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000; /* Ensure footer stays at the bottom */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('page1') }}">Home</a></li>
+            <li><a href="{{ url_for('new_investment') }}">New Investments</a></li>
+            <li><a href="{{ url_for('reports') }}">Reports</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>Contact us: email@example.com | Phone: 123-456-7890</p>
+    </footer>
+</body>
+</html>

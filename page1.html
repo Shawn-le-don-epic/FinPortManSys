@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Investment Platform</h1>
+
+<div class="tiles">
+    <div class="tile"><a href="{{ url_for('stocks') }}">Stocks</a></div>
+    <div class="tile"><a href="{{ url_for('bonds') }}">Bonds</a></div>
+    <div class="tile"><a href="{{ url_for('realestate') }}">Real Estate</a></div>
+    <div class="tile"><a href="{{ url_for('goldbonds') }}">Gold Bonds</a></div>
+    <div class="tile"><a href="{{ url_for('fixeddeposits') }}">Fixed Deposits</a></div>
+</div>
+{% endblock %}

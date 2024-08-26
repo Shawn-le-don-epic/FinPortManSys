@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Reports{% endblock %}
+
+{% block content %}
+        <h1>Reports</h1>
+        <div class="tiles">
+            <div class="tile"><a href="{{ url_for('best_investment') }}">Best Investment</a></div>
+            <div class="tile"><a href="{{ url_for('self_nominated_investments') }}">Self-Nominated Investments</a></div>
+            <div class="tile"><a href="{{ url_for('other_nominated_investments') }}">Other-Nominated Investments</a></div>
+            <div class="tile"><a href="{{ url_for('currency_conversions') }}">Currency Conversions</a></div>
+        </div>
+{% endblock %} 

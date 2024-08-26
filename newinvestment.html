@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}New Investments{% endblock %}
+
+{% block content %}
+<h1>Choose an Investment Type</h1>
+<div class="investment-options">
+    <div class="investment-option">
+        <a href="{{ url_for('new_stock') }}">Stocks</a>
+    </div>
+    <div class="investment-option">
+        <a href="{{ url_for('new_bond') }}">Bonds</a>
+    </div>
+    <div class="investment-option">
+        <a href="{{ url_for('new_realestate') }}">Real Estate</a>
+    </div>
+    <div class="investment-option">
+        <a href="{{ url_for('new_goldbond') }}">Gold Bonds</a>
+    </div>
+    <div class="investment-option">
+        <a href="{{ url_for('new_fixeddeposit') }}">Fixed Deposits</a>
+    </div>
+</div>
+{% endblock %}
